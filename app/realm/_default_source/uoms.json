@@ -1,0 +1,1 @@
+[{"_id":{"$oid":"5fdc7f36592cf046046b59f7"},"name":"BAGS","weight":50,"status":1,"__v":0},{"_id":{"$oid":"5fdc7f4d592cf046046b59f8"},"name":"DONKEY LOAD","weight":30,"status":1,"__v":0},{"_id":{"$oid":"5fdc7f71592cf046046b59f9"},"name":"CART LOAD","weight":400,"status":1,"__v":0}]
