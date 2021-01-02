@@ -114,7 +114,7 @@ class App extends React.Component{
   render(){
     return (
          <Container style={{flex:1}}>
-         <ImageBackground style={{flex:1}} source={require("../../assets/img/img1.jpeg")}>
+         <ImageBackground style={{flex:1}} source={require("../../assets/img/maize.jpg")}>
                <Header translucent androidStatusBarColor={"transparent"} style={{backgroundColor:"transparent",marginTop:20}}>
                <Left style={{maxWidth:50,alignContent:'center',alignItems:'center'}}>
                    <Icon
