@@ -19,11 +19,12 @@ import {
     List,
     ListItem,
     Menu,
-    Select,
-    Spinner
+    Spinner,
+    Select
     
 
 } from '@ui-kitten/components';
+
 import Modal from 'react-native-modalbox'
 
 import {
@@ -206,12 +207,15 @@ class SiteIdentification extends React.Component{
 
   }
 
+
+
+
   
 
 
   render(){
     return (
-         <Layout appearance="ghost" style={styles.mainContainer}>
+         <Layout  style={styles.mainContainer}>
               <StatusBar translucent={true} backgroundColor="transparent"/>
               <TopNavigation
                     leftControl={this._BackAction()}
@@ -220,7 +224,7 @@ class SiteIdentification extends React.Component{
                     titleStyle={styles.titleStyle}
                 />
                 
-               <Layout appearance="ghost" >
+               <Layout  >
                   
                    
                    <Select
@@ -289,11 +293,8 @@ class SiteIdentification extends React.Component{
                   </View>
                  :
                  this.props.loadingAnalysisData == "success"?
-                 <TouchableOpacity style={{marginTop:25}} onPress={()=>this._router()}>
-                 <Text  style={{fontSize:20,color:"#ce901d",alignSelf:'center'}}>
-                     Next
-                 </Text>
-</TouchableOpacity>  :null
+                 <Button  onPress={()=>this._router()} status="warning" style={{height:10,marginHorizontal:20}} size='medium'> Next </Button>
+                   :null
                }
               
          </Layout>

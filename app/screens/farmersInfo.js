@@ -51,7 +51,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
     farmersName:state.siteProfiling.farmersName,
     farmersPhoneNumber:state.siteProfiling.farmersPhoneNumber,
     attainableYield:state.siteProfiling.attainableYield,
-    siteId :state.siteProfiling.siteId
+    siteId :state.siteProfiling.siteId,
+    fieldSize :state.siteProfiling.fieldSize
   }
 }
 
@@ -62,6 +63,7 @@ const mapDispatchToProps = (dispatch)=>({
    setFarmersPhone:(payload)=>dispatch({type:"DO-SET-FARMER-PHONE",payload:payload}),
    setAttainableYield:(payload)=>dispatch({type:"DO-SET-ATTAINABLE-YIELD",payload:payload}),
    setSiteId:(payload)=>dispatch({type:"DO-SET-SITE-ID",payload:payload}),
+   setfieldSize:(payload)=>dispatch({type:"DO-SET-FIELD-SIZE",payload:payload}),
 
 })
 
@@ -165,13 +167,29 @@ class FarmersInfo extends React.Component{
                     
                     <Input
                         status="warning"
-                        label="Attainable Yield"
+                        label="Target Yield"
                         style={styles.input}
                         onChangeText={(text)=>this.props.setAttainableYield(text)}
                         size="small"
                         keyboardType="numeric"
-                        placeholder='Enter attainable yield'
+                        placeholder='Enter target yield for this site'
                         value={this.props.attainableYield}
+                    />
+                    
+                 </Layout>
+
+                 
+                 <Layout  style={styles.expectedYield}>
+                    
+                    <Input
+                        status="warning"
+                        label="Field Size"
+                        style={styles.input}
+                        onChangeText={(text)=>this.props.setfieldSize(text)}
+                        size="small"
+                        keyboardType="numeric"
+                        placeholder='Enter field size'
+                        value={this.props.fieldSize}
                     />
                     
                  </Layout>

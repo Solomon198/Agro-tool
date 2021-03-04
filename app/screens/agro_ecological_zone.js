@@ -19,7 +19,8 @@ import {
     List,
     ListItem,
     Menu,
-    Select
+    Select,
+    SelectItem
 
 } from '@ui-kitten/components';
 import Modal from 'react-native-modalbox'
@@ -31,6 +32,7 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
+
 } from 'react-native';
 
 import EvaButtons from '../components/evaButtons';
@@ -155,7 +157,7 @@ class AgroEcologicalZone extends React.Component{
 
   render(){
     return (
-         <Layout appearance="ghost" style={styles.mainContainer}>
+         <Layout  style={styles.mainContainer}>
               <StatusBar translucent={true} backgroundColor="transparent"/>
               <TopNavigation
                     leftControl={this._BackAction()}
@@ -164,7 +166,7 @@ class AgroEcologicalZone extends React.Component{
                     titleStyle={styles.titleStyle}
                 />
                 
-               <Layout appearance="ghost" style={styles.subContainer}>
+               <Layout  style={styles.subContainer}>
                   
                    <Text style={styles.modalHead} category="h3">{pageTitle}</Text>
 
@@ -176,6 +178,7 @@ class AgroEcologicalZone extends React.Component{
                         onSelect={(item)=>this._showModal(item)}
                         data={this.state.data}
                         style={styles.select}
+                        
                     />
                    <Layout style={styles.expectedYield}>
                     

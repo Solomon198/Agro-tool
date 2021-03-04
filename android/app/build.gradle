@@ -123,7 +123,6 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -144,9 +143,12 @@ android {
         applicationId "com.agrotool"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
+        versionCode 
+        multiDexEnabled true
         versionName "1.0"
     }
+
+   
     splits {
         abi {
             reset()
@@ -197,6 +199,7 @@ dependencies {
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation 'com.android.support:multidex:1.0.3' // https://mvnrepository.com/artifact/com.android.support/multidex
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

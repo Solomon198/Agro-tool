@@ -6,10 +6,13 @@ const initState  = {
     farmersName:null,
     farmersPhoneNumber:null,
     attainableYield:null,
-    siteId :null
+    siteId :null,
+    fieldSize:null
 
   
 }
+
+
 
 export default function reducer(
     state  = initState,
@@ -40,6 +43,25 @@ export default function reducer(
         break;
       }
 
+      case "SET-FIELD-SIZE":{
+        state = {...state,fieldSize:action.payload}
+        break;
+      }
+
+
+      case "CLEAR-STORAGE":{
+        return state = {
+          ...state,
+          farmersName:null,
+          farmersPhoneNumber:null,
+          attainableYield:null,
+          siteId :null,
+          fieldSize:null
+      
+        
+      }
+        break;
+      }
      
 
      

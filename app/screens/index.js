@@ -8,7 +8,7 @@
 import React from 'react';
 
 import { Layout, Text, Input, Button, Avatar} from '@ui-kitten/components';
-import {Header,Body,Left,Right,Icon,Container,ActionSheet} from 'native-base'
+import {Header,Body,Left,Right,Icon,Container,ActionSheet,Title} from 'native-base'
 import {
   StyleSheet,
   View,
@@ -40,7 +40,8 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
 const mapDispatchToProps = (dispatch)=>({
   setOwnData : ()=> dispatch({type:"DO-SET-OPTION-OWN-DATA"}),
-  setPrefinedData : ()=> dispatch({type:"DO-SET-OPTION-PREDEFINED-DATA"})
+  setPrefinedData : ()=> dispatch({type:"DO-SET-OPTION-PREDEFINED-DATA"}),
+  clearStorage : ()=> dispatch({type:"DO-CLEAR-STORAGE"})
 })
 
 
@@ -102,11 +103,13 @@ class App extends React.Component{
   }
 
   usePredefineData(){
+    this.props.clearStorage();
     this.props.setPrefinedData();
     this.props.navigation.navigate("siteIdentification")
   }
 
   useOwnData(){
+    this.props.clearStorage();
     this.props.setOwnData();
     this.props.navigation.navigate("siteIdentification")
   }
@@ -114,17 +117,21 @@ class App extends React.Component{
   render(){
     return (
          <Container style={{flex:1}}>
-         <ImageBackground style={{flex:1}} source={require("../../assets/img/maize.jpg")}>
-               <Header translucent androidStatusBarColor={"transparent"} style={{backgroundColor:"transparent",marginTop:20}}>
+         <ImageBackground style={{flex:1}} source={require("../../assets/img/img1.jpg")}>
+               <Header translucent androidStatusBarColor={"orange"} style={{backgroundColor:"white",marginTop:20}}>
                <Left style={{maxWidth:50,alignContent:'center',alignItems:'center'}}>
                    <Icon
                     onPress={()=>this.settings()}
-                    style={{width:32,height:32,color:"white"}}
+                    style={{width:32,height:32,color:"orange"}}
                     type="FontAwesome"
                     name='gear'
                     />
                  </Left>
-                 <Body></Body>
+                 <Body>
+                   <Title style={{color:"#333",fontWeight:"500",fontSize:17}}>
+                     Select one of the Data Input Method below.
+                   </Title>
+                 </Body>
                 
                </Header>
                <Layout style={{backgroundColor:'transparent',flex:1}}>

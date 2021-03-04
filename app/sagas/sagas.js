@@ -48,6 +48,12 @@ const watchSetLga = function* watchSetLga(){
 }
 
 
+const watchClearStorage = function* watchClearStorage(){
+   yield takeEvery("DO-CLEAR-STORAGE",function*(action){
+     yield put({type:"CLEAR-STORAGE"})
+   })
+}
+
 
 const watchGetZone = function* watchGetZone(){
   yield takeEvery("DO-GET-ZONE",function*(action){
@@ -349,6 +355,12 @@ const watchDeleteFertilizerSource = function* watchDeleteFertilizerSource(){
   })
 }
 
+const watchDoSetFieldSize = function* watchDoSetFieldSize(){
+    yield takeEvery("DO-SET-FIELD-SIZE",function*(action){
+      yield put({type:"SET-FIELD-SIZE",payload:action.payload})
+    })
+}
+
 
 
 
@@ -357,6 +369,8 @@ const watchDeleteFertilizerSource = function* watchDeleteFertilizerSource(){
 const rootSaga = function* rootSaga() {
 
   yield all([
+
+    watchDoSetFieldSize(),
 
     watchSetOwnData(),
     watchSetPredefineData(),
@@ -399,6 +413,8 @@ const rootSaga = function* rootSaga() {
 
     watchAddFertilizerSource(),
     watchDeleteFertilizerSource(),
+
+    watchClearStorage(),
   ]);
 
 

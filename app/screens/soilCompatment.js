@@ -84,7 +84,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
                           
                  <Input
                     status="warning"
-                    label="Clay(%)"
+                    // label="Clay(%)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     onChangeText={(text)=>this.props.setClay(text)}
@@ -95,7 +95,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                  <Input
                     status="warning"
-                    label="pH(H2O)"
+                    // label="pH(H2O)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     onChangeText={(text)=>this.props.setPh(text)}
@@ -107,7 +107,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                    <Input
                     status="warning"
-                    label="K(Cmolc/Kg)"
+                    // label="K(Cmolc/Kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     onChangeText={(text)=>this.props.setK(text)}
@@ -118,7 +118,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                   <Input
                     status="warning"
-                    label="Magnesium"
+                    // label="Magnesium"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"
@@ -129,7 +129,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                   <Input
                     status="warning"
-                    label="CEC"
+                    // label="CEC"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"
@@ -140,7 +140,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                    <Input
                     status="warning"
-                    label="Mehlich P(mg/kg)"
+                    // label="Mehlich P(mg/kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     onChangeText={(text)=>this.props.setMehlich(text)}
@@ -151,7 +151,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                  <Input
                     status="warning"
-                    label="OC(g/kg)"
+                    // label="OC(g/kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     onChangeText={(text)=>this.props.setOc(text)}
@@ -162,7 +162,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                    <Input
                     status="warning"
-                    label="Nitrogen(g/Kg)"
+                    // label="Nitrogen(g/Kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"
@@ -173,7 +173,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                   <Input
                     status="warning"
-                    label="S(mg/kg)"
+                    // label="S(mg/kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"
@@ -185,7 +185,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                  <Input
                     status="warning"
-                    label="Zinc(mg/kg)"
+                    // label="Zinc(mg/kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"
@@ -196,7 +196,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 
                  <Input
                     status="warning"
-                    label="Ca(Cmolc/kg)"
+                    // label="Ca(Cmolc/kg)"
                     style={{marginHorizontal:10,marginTop:5}}
                     size="small"
                     keyboardType="numeric"

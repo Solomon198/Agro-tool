@@ -17,6 +17,7 @@ const initState  = {
   
 }
 
+
 export default function reducer(
     state  = initState,
     action 
@@ -82,6 +83,25 @@ export default function reducer(
       }
 
 
+
+        case "CLEAR-STORAGE":{
+          return state = {
+            ...state,
+            clay:null,
+            pH:null,
+            k:null,
+            mg : null,
+            cec:null,
+            mehlich:null,
+            oc:null,
+            n:null,
+            s:null,
+            zn:null,
+            ca:null
+          
+        }
+          break;
+      }
 
      
       default: {

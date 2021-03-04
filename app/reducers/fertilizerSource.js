@@ -11,7 +11,9 @@ const initState  = {
    fertilizers:[],
    addedFertilizerSources:[]
   
+   
 }
+
 
 export default function reducer(
     state  = initState,
@@ -78,6 +80,22 @@ export default function reducer(
         let fertilizers = Object.assign([],state.addedFertilizerSources);
         fertilizers.splice(action.payload,1);
         state = {...state,addedFertilizerSources:fertilizers}
+        break;
+      }
+
+      case "CLEAR-STORAGE":{
+        return state = {
+          ...state,
+          fertilizerSource:[],
+          fertilizerType:[],
+          loadingFertilizersType:"unitiated",
+          loadingFertilizersSource:"unitiated",
+          loadingFertilizers:"unitiated",
+          fertilizers:[],
+          addedFertilizerSources:[]
+         
+          
+       }
         break;
       }
 

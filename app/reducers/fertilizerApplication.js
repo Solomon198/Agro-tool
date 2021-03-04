@@ -10,6 +10,7 @@ const initState  = {
   
 }
 
+
 export default function reducer(
     state  = initState,
     action 
@@ -46,6 +47,16 @@ export default function reducer(
         let fertilizers = Object.assign([],state.fertilizers);
         fertilizers.splice(action.payload,1);
         state = {...state,fertilizers:fertilizers,loadingFertilizerOptions:"unitiated"}
+        break;
+      }
+
+      case "CLEAR-STORAGE":{
+        return state = {
+          ...state,
+          uom:[],
+          organicFertilizers:[],
+          loadingFertilizerOptions:"unitiated",
+          fertilizers:[]}
         break;
       }
 

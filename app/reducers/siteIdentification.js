@@ -20,6 +20,9 @@ const initState  = {
   
 }
 
+const reInitalizeer = Object.assign({},initState);
+
+
 export default function reducer(
     state  = initState,
     action 
@@ -130,7 +133,29 @@ export default function reducer(
         break;
       }
 
-  
+      case "CLEAR-STORAGE":{
+      return state = {
+        ...state,
+        useOwnData: false,
+        usePredefineData : false,
+        zones : [],
+        states : [],
+        communities : [],
+        selectedZone : {},
+        selectedState:{},
+        selectedLga : {},
+        analysisData : {},
+      
+        loadingZones :"unitiated",
+        loadingStates: "unitiated",
+        loadingLga : "unitiated",
+        loadingAnalysisData:"unitiated"
+        
+      }
+        break;
+      }
+
+
 
 
      
